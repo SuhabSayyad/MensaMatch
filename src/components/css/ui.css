@@ -1,0 +1,26 @@
+/*HEADER*/
+#logo {
+  height: 125px;
+  padding-bottom: 3px;
+  border-bottom: 4px solid black;
+}
+
+/*FOOTER*/
+#footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: space-between;
+  /* Warum funktioniert space-between nicht richtig?? */
+  padding-top: 5px;
+  border-top: 3px solid gray;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+#plus {
+  background-color: rgba(193, 217, 46, 1);
+  border: 1px solid gray;
+  box-shadow:  5px 5px 3px 3px lightgray;
+}
