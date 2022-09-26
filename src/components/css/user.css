@@ -1,0 +1,30 @@
+#user {
+    width: 90vw;
+}
+
+.around {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.spacing {
+    margin: 10px;
+}
+
+.edit {
+    border: 3px solid #B3C92A;
+}

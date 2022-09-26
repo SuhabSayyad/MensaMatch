@@ -1,12 +1,13 @@
-//import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-
+//Views
 import Footer from "./../ui/footer";
 import Header from "./../ui/header";
 
 const Main = () => {
   return (
-    <div className="App">
+    <div id="main">
       <Header />
+      <p className="sideBySide">My friends</p>
+      
       <Footer />
     </div>
   );

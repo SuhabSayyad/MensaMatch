@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Question6 = () => {
+  let navigate = useNavigate();
+
   return (
     <div>
       <div id="greenQ"></div>
@@ -17,7 +21,13 @@ const Question6 = () => {
         </div>
         <p className="space"></p>
         <p>
-          <button type="submit" className="gradientButton">Next!</button>
+          <button
+            type="submit"
+            className="gradientButton"
+            onClick={() => navigate("/question7")}
+          >
+            Next!
+          </button>
         </p>
       </form>
     </div>

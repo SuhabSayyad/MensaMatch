@@ -1,5 +1,5 @@
 #greenW {
-    width: 100%;
+    width: 100vw;
     background-image: linear-gradient(to bottom, rgba(137, 217, 46, 1), rgba(193, 217, 46, 1));
     padding-bottom: 450px;
     border-bottom-left-radius: 150px;

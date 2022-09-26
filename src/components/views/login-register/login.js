@@ -1,9 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 //Icons
 import { IconContext } from "react-icons";
 import { BsGoogle } from "react-icons/bs";
 import { BsApple } from "react-icons/bs";
 
 const Login = () => {
+  let navigate = useNavigate();
   return (
     <IconContext.Provider value={{ color: "black", size: "3em" }}>
       <div>
@@ -36,10 +39,16 @@ const Login = () => {
           </p>
           <p id="space"></p>
           <p>
-            <button type="submit" className="gradientButton">Log in</button>
+            <button
+              type="submit"
+              className="gradientButton"
+              onClick={() => navigate("/main")}
+            >
+              Log in
+            </button>
           </p>
           <p>
-            <button>Register</button>
+            <button onClick={() => navigate("/register")}>Register</button>
           </p>
         </form>
       </div>

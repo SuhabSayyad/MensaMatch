@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 //Icons
@@ -6,13 +5,8 @@ import { IconContext } from "react-icons";
 import { ImWink2 } from "react-icons/im";
 import { GoPrimitiveDot } from "react-icons/go";
 
-//Views
-import Welcome2 from "./welcome2";
-
-
 const Welcome = () => {
   let navigate = useNavigate();
-  ;
 
   return (
     <IconContext.Provider
@@ -31,7 +25,10 @@ const Welcome = () => {
         </p>
 
         <p>
-          <button className="gradientButton" onClick={navigate("/welcome2")}>
+          <button
+            className="gradientButton"
+            onClick={() => navigate("/welcome2")}
+          >
             Next!
           </button>
         </p>

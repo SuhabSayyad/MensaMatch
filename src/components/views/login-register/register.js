@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 //Icons
 import { IconContext } from "react-icons";
 import { BsGoogle } from "react-icons/bs";
 import { BsApple } from "react-icons/bs";
 
 const Register = () => {
+  let navigate = useNavigate();
+
   return (
     <IconContext.Provider value={{ color: "black", size: "3em" }}>
       <div>
@@ -46,10 +50,16 @@ const Register = () => {
           </p>
           <p id="space"></p>
           <p>
-            <button type="submit" className="gradientButton">Register</button>
+            <button
+              type="submit"
+              className="gradientButton"
+              onClick={() => navigate("/register-pin")}
+            >
+              Register
+            </button>
           </p>
           <p>
-            <button>Log in</button>
+            <button onClick={() => navigate(-1)}>Log in</button>
           </p>
         </form>
       </div>

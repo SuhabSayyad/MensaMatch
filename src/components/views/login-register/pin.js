@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const Pin = () => {
+  let navigate = useNavigate();
+
   return (
     <div>
       <div id="greenL"></div>
@@ -39,7 +43,13 @@ const Pin = () => {
         </p>
         <p id="space"></p>
         <p>
-          <button type="button" className="gradientButton">Go!</button>
+          <button
+            type="button"
+            className="gradientButton"
+            onClick={() => navigate("/start-questions")}
+          >
+            Go!
+          </button>
         </p>
       </form>
     </div>
