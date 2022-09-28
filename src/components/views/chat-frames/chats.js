@@ -3,19 +3,64 @@ import { useNavigate } from "react-router-dom";
 //Views
 import Footer from "./../../ui/footer";
 
+//svg
+import gregor from "./../../img/gregor.svg";
+
 const Chats = () => {
   let navigate = useNavigate();
 
   return (
-    <div>
-      <div id="chatSlider">
+    <div id="chatFrame">
+      <div id="chatListSlider">
         <p>
-          <span></span>
+          <span id="span"></span>
         </p>
         <ul className="chatList">
-          <li>Chat 1</li>
-          <li>Chat 2</li>
-          <li>Chat 3</li>
+          <div className="userChat">
+            <div id="friendsInfoSmall" onClick={() => navigate("/chat")}>
+              <img src={gregor} alt="Avatar"></img>
+              <div>
+                <p>Gregor Zamza</p>
+                <p id="message">Yes, I will be waiting for you!</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div className="userChat">
+            <div id="friendsInfoSmall" onClick={() => navigate("/chat")}>
+              <img src={gregor} alt="Avatar"></img>
+              <div>
+                <p>Gregor Zamza</p>
+                <p id="message">Yes, I will be waiting for you!</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div className="userChat">
+            <div id="friendsInfoSmall" onClick={() => navigate("/chat")}>
+              <img src={gregor} alt="Avatar"></img>
+              <div>
+                <p>Gregor Zamza</p>
+                <p id="message">Yes, I will be waiting for you!</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div className="userChat">
+            <div id="friendsInfoSmall" onClick={() => navigate("/chat")}>
+              <img src={gregor} alt="Avatar"></img>
+              <div>
+                <p>Gregor Zamza</p>
+                <p id="message">Yes, I will be waiting for you!</p>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+        
         </ul>
       </div>
       <Footer />

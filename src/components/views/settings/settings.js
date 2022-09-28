@@ -54,9 +54,9 @@ let navigate = useNavigate();
         <div className="sideBySide" id="locationSpace">
           <p>Show my location</p>
           <p>
-            <label class="switch">
+            <label className="switch">
               <input type="checkbox"></input>
-              <span class="slider round"></span>
+              <span className="slider round"></span>
             </label>
           </p>
         </div>

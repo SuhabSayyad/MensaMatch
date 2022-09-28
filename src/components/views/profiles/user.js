@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
 //Views
-import Footer from "../ui/footer";
-import Header from "../ui/header";
+import Footer from "../../ui/footer";
+import Header from "../../ui/header";
+
 
 const User = () => {
   let navigate = useNavigate();

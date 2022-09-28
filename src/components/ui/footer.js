@@ -11,7 +11,7 @@ const Footer = () => {
 
   function showChats() {
     navigate("/chats")
-    document.getElementById("chatSlider").classList.toggle("active");
+    document.getElementById("chatListSlider").classList.toggle("active");
   }
 
   return (

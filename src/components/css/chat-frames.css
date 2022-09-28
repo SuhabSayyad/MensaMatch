@@ -1,0 +1,79 @@
+#chatFrame {
+    width: 100vw;
+}
+
+#friendsInfo {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#friendsInfo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#friendsInfoSmall {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#friendsInfoSmall img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.userChat {
+    margin-left: -25px;
+    margin-right: 10px;
+}
+
+.friendMsg {
+    float: left;
+    background-color: white;
+    border-radius: 25px;
+    width: 300px;
+    padding: 1px;
+    margin: 20px 0px 0px 15px;
+}
+
+.userMsg {
+    float: right;
+    background-color: #C1D92E;
+    border-radius: 25px;
+    width: 300px;
+    padding: 1px;
+    margin: 20px 15px 0px 0px;
+}
+
+.time {
+    float: right;
+    padding: 0px 15px 5px 0px;
+    font-size: small;
+}
+
+#keyboard {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 30px;
+    padding: 50px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    font-size: larger;
+}
+
+#message {
+    margin-top: -18px;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: normal;
+}

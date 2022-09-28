@@ -1,6 +1,5 @@
-import React, {Component} from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 
 //CSS
 import "./components/css/App.css";
@@ -11,6 +10,8 @@ import "./components/css/ui.css";
 import "./components/css/settings.css";
 import "./components/css/user.css";
 import "./components/css/sliders.css";
+import "./components/css/chat-frames.css";
+import "./components/css/main.css";
 
 //---------------Views-----------------//
 //welcome
@@ -40,10 +41,10 @@ import UpdateDescription from "./components/views/settings/update-description";
 
 import Main from "./components/views/main";
 import Browse from "./components/views/browse";
-import User from "./components/views/user";
+import User from "./components/views/profiles/user";
 //chats
 import Chats from "./components/views/chat-frames/chats";
-
+import Chat from "./components/views/chat-frames/chat";
 
 
 const App = () => {
@@ -77,6 +78,7 @@ const App = () => {
         <Route path="/main" element={<Main />}></Route>
         <Route path="/browse" element={<Browse />}></Route>
         <Route path="/chats" element={<Chats />}></Route>
+        <Route path="/chat" element={<Chat />}></Route>
       </Routes>
     </div>
   );

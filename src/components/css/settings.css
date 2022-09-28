@@ -6,11 +6,6 @@
     font-size: 35px;
 }
 
-#arrow {
-    display: flex;
-    justify-content: flex-start;
-}
-
 #label {
     color: gray;
     display: flex;

@@ -26,3 +26,9 @@
   background-color: rgba(193, 217, 46, 1);
   border: 1px solid gray;
 }
+
+/*Header of Settings and chatframe*/
+#arrow {
+  display: flex;
+  justify-content: flex-start;
+}
