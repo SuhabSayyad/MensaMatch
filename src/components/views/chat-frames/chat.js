@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { IconContext } from "react-icons";
 
 //Icons
@@ -9,6 +10,14 @@ import gregor from "./../../img/gregor.svg";
 
 const Chat = () => {
   let navigate = useNavigate();
+
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+      setTimeout(function () {
+        setActive(true);
+      }, 100);
+    }, []);
 
   return (
     <IconContext.Provider
@@ -23,7 +32,7 @@ const Chat = () => {
           <p>Gregor Zamza</p>
         </div>
         {/*Tricked: Only a few Frontend messages, because implementing live Chat is too complicated here*/}
-        <div id="chatBox">
+        <div id="slideBox" className={active ? "active" : ""}>
           <div className="friendMsg">
             <p>
               Hello. Mind if I join you for your invitation at 12:00 in the
@@ -50,7 +59,6 @@ const Chat = () => {
               placeholder="Enter your message here!"
             ></input>
           </p>
-          
         </div>
       </div>
     </IconContext.Provider>

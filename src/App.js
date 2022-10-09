@@ -8,10 +8,10 @@ import "./components/css/login-register.css";
 import "./components/css/questions.css";
 import "./components/css/ui.css";
 import "./components/css/settings.css";
-import "./components/css/user.css";
+import "./components/css/profiles.css";
 import "./components/css/sliders.css";
 import "./components/css/chat-frames.css";
-import "./components/css/main.css";
+import "./components/css/invitations.css";
 
 //---------------Views-----------------//
 //welcome
@@ -33,19 +33,24 @@ import Question6 from "./components/views/questions/question6";
 import Question7 from "./components/views/questions/question7";
 //settings
 import Settings from "./components/views/settings/settings";
+import UpdateImg from "./components/views/settings/update-img";
 import UpdateName from "./components/views/settings/update-name";
 import UpdateAge from "./components/views/settings/update-age";
 import UpdateDiet from "./components/views/settings/update-diet";
 import UpdatePlace from "./components/views/settings/update-place";
 import UpdateDescription from "./components/views/settings/update-description";
-
-import Main from "./components/views/main";
-import Browse from "./components/views/browse";
+//profiles
 import User from "./components/views/profiles/user";
+import Someone from "./components/views/profiles/someone";
 //chats
 import Chats from "./components/views/chat-frames/chats";
 import Chat from "./components/views/chat-frames/chat";
 
+import Main from "./components/views/main";
+import Browse from "./components/views/browse";
+import Map from "./components/views/map";
+import InvitationPage from "./components/models/invitation";
+import Matched from "./components/views/matched";
 
 const App = () => {
   return (
@@ -65,9 +70,11 @@ const App = () => {
         <Route path="/question5" element={<Question5 />}></Route>
         <Route path="/question6" element={<Question6 />}></Route>
         <Route path="/question7" element={<Question7 />}></Route>
+        <Route path="/someone" element={<Someone />}></Route>
         <Route path="/user" element={<User />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
         <Route path="/settings/update-name" element={<UpdateName />}></Route>
+        <Route path="/settings/update-img" element={<UpdateImg />}></Route>
         <Route path="/settings/update-age" element={<UpdateAge />}></Route>
         <Route path="/settings/update-diet" element={<UpdateDiet />}></Route>
         <Route path="/settings/update-place" element={<UpdatePlace />}></Route>
@@ -75,10 +82,13 @@ const App = () => {
           path="/settings/update-description"
           element={<UpdateDescription />}
         ></Route>
-        <Route path="/main" element={<Main />}></Route>
-        <Route path="/browse" element={<Browse />}></Route>
         <Route path="/chats" element={<Chats />}></Route>
         <Route path="/chat" element={<Chat />}></Route>
+        <Route path="/main" element={<Main />}></Route>
+        <Route path="/browse" element={<Browse />}></Route>
+        <Route path="/map" element={<Map />}></Route>
+        <Route path="/invitation" element={<InvitationPage/>}></Route>
+        <Route path="/matched" element={<Matched/>}></Route>
       </Routes>
     </div>
   );

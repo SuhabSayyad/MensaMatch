@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 //Views
 import Footer from "./../ui/footer";
 import Header from "./../ui/header";
+import Friends from "./profiles/friends";
 
 //Data
-import { user1 } from "../models/persistence";
+import { invitations } from "../models/invitation";
 
 const Main = () => {
   let navigate = useNavigate();
@@ -13,22 +14,23 @@ const Main = () => {
   return (
     <div id="main">
       <Header />
-      <div>
-        <p className="sideBySide">My friends</p>
-        <div id="friends">
-          <ul>
-            {user1.friends?.map(friend => {
-              return (
-                <li>
-                  <p>
-                    <img src="{user1.friend.img}"></img>
-                  </p>
-                </li>
-              );
-              })}
-          </ul>
-          
-        </div>
+      <Friends />
+      <div id="filter">
+        <h2>Invitations</h2>
+        <p>Filter by</p>
+      </div>
+      <div id="invitationList">
+        {invitations.map((invitation) => {
+          return (
+            <div id="invitation" onClick={() => navigate("/invitation")}>
+              <div id="time">
+                <p>{invitation.date},&nbsp;</p>
+                <p>{invitation.time}</p>
+              </div>
+              <p id="place">{invitation.place}</p>
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </div>

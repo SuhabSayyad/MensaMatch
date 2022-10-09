@@ -8,7 +8,7 @@ const Question1 = () => {
       <div id="greenQ"></div>
       <p>Step 1 of 7</p>
       <h1>What is your name?</h1>
-      <form action="" method="post">
+      <form action="" method="post" onSubmit={() => navigate("/question2")}>
         <p>
           <input
             type="text"
@@ -21,11 +21,7 @@ const Question1 = () => {
         </p>
         <p className="space"></p>
         <p>
-          <button
-            type="submit"
-            className="gradientButton"
-            onClick={() => navigate("/question2")}
-          >
+          <button type="submit" className="gradientButton">
             Next!
           </button>
         </p>

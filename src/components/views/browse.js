@@ -1,37 +1,17 @@
-import { useMemo } from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import { useNavigate } from "react-router-dom";
 
 //Views
-import Footer from "../ui/footer";
+import Footer from "./../ui/footer";
 
-export default function Browse() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBDc_yl2DgtvsPKQPTe68rCCleTcSdOZIo",
-  });
+const Browse = () => {
+  let navigate = useNavigate();
 
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Browse2 />;
-}
-
-export const Browse2 = () => {
-  const center = useMemo(() => ({ lat: 51.49, lng: 7.417 }), []);
-  
   return (
-    <div>
-      <GoogleMap
-        zoom={15.5}
-        center={center}
-        mapContainerClassName="map-container"
-      >
-        <Marker  position={center}></Marker>
-      </GoogleMap>
+    <div id="main">
+
       <Footer />
     </div>
   );
-  {
-    /*<Header />*/
-  }
-  {
-    /*<Footer />*/
-  }
 };
+
+export default Browse;

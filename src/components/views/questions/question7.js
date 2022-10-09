@@ -7,7 +7,7 @@ const Question7 = () => {
       <div id="greenQ"></div>
       <p>Step 7 of 7</p>
       <h1>Add a description</h1>
-      <form action="" method="post">
+      <form action="" method="post" onSubmit={() => navigate("/main")}>
         <p>
           <textarea
             id="user_description"
@@ -16,13 +16,12 @@ const Question7 = () => {
             maxLength="500"
           ></textarea>
         </p>
+        <p className="optional">
+          <small>(optional)</small>
+        </p>
         <p className="space"></p>
         <p>
-          <button
-            type="submit"
-            className="gradientButton"
-            onClick={() => navigate("/main")}
-          >
+          <button type="submit" className="gradientButton">
             Finished!
           </button>
         </p>

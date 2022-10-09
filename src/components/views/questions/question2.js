@@ -7,8 +7,9 @@ const Question2 = () => {
       <div id="greenQ"></div>
       <p>Step 2 of 7</p>
       <h1>Upload your photo</h1>
-      <p id="display_image"></p>
-      <form action="" method="post">
+
+      <form action="" method="post" onSubmit={() => navigate("/question3")}>
+        <p id="display_image"></p>
         <p>
           <input
             type="file"
@@ -18,10 +19,15 @@ const Question2 = () => {
             width="50"
             height="50"
           ></input>
+          <p className="optional">
+            <small>(optional)</small>
+          </p>
         </p>
         <p className="space"></p>
         <p>
-          <button type="submit" className="gradientButton" onClick={() => navigate("/question3")}>Next!</button>
+          <button type="submit" className="gradientButton">
+            Next!
+          </button>
         </p>
       </form>
     </div>

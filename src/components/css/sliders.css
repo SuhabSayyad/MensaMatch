@@ -1,9 +1,10 @@
 /*ChatList*/
+
 #chatListSlider {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -95vh;
+    bottom: -195vh;
     width: 100vw;
     height: 95vh;
     background-color: rgba(193, 217, 46, 0.4);
@@ -34,16 +35,58 @@
 
 /*Individual Chat*/
 
-#chatBox {
+#slideBox {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -80vh;
     width: 100vw;
     height: 80vh;
     background-color: rgba(193, 217, 46, 0.4);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-
     transition: .7s;
+}
+
+#slideBox.active {
+    bottom: 0;
+}
+
+#matchSlider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100vh;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(137, 217, 46, 1), rgba(193, 217, 46, 1));
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transition: .7s;
+}
+
+
+#matchSlider.active {
+    bottom: 0;
+}
+
+#matchSlider div img {
+    margin-top: 2vh;
+    width: 35vw;
+    height: auto;
+}
+
+#matchMessage { 
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 36px;
+}
+
+#matchSlider button {
+    margin-top: 45vh;
 }

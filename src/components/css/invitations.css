@@ -1,0 +1,73 @@
+#invitationList {
+    overflow-y: scroll; 
+    height: 390px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9290904e;
+    border-radius: 25px;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 18px;
+    margin-bottom: -10px;
+}
+
+#invitation {
+    display: inline-block;
+    width: 80vw;
+    height: 70px;
+    margin: 8px;
+    background-color: #C1D92E;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px #929090a2;
+}
+
+#time {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    margin-top: -5px;
+}
+
+#place {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 15px;
+    margin-top: -15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#invitationMessage {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#invitationInfo{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#invitationInfo p {
+    margin: 10px 20px 0px 10px;
+}
+
+#nameI {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 35px 20px 0px 0px;
+}

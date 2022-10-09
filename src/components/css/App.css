@@ -39,7 +39,7 @@ button {
   padding-right: 50px;
   border-radius: 20px;
   border: 5px;
-  border: solid gray;
+  border: solid grey;
 }
 
 .gradientButton {
@@ -72,17 +72,28 @@ textarea {
 
 hr {
   background-color: rgba(193, 217, 46, 0.57);
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .sideBySide {
   display: flex;
   justify-content: space-between;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-right: 10px;
 }
 
 #main {
   width: 100vw;
+}
+
+#friends img {
+  width: 60px;
+  height: 60px;
+  margin: 7px;
+  border-radius: 50%;
+}
+
+.bold {
+  font-weight: bold;
 }

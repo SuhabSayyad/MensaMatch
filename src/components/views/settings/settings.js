@@ -4,6 +4,8 @@ import { IconContext } from "react-icons";
 //Icons
 import { BiArrowBack } from "react-icons/bi";
 
+//Data
+import { user1 } from "../../models/persistence";
 
 const Settings = () => {
 let navigate = useNavigate();
@@ -20,34 +22,43 @@ let navigate = useNavigate();
           <p>My avatar</p>
           {/* Bild einfügen*/}
           <p>
-            <img src="" width="50px" height="50px" alt="user's picture"></img>
+            <img
+              src={user1.img}
+              id="smallImg"
+              width="70px"
+              height="70px"
+              alt="user's picture"
+              onClick={() => navigate("/settings/update-img")}
+            ></img>
           </p>
         </div>
         <hr />
         <div className="sideBySide">
           <p>My nickname</p>
-          <p onClick={() => navigate("/settings/update-name")}>user's name</p>
+          <p onClick={() => navigate("/settings/update-name")}>{user1.name}</p>
         </div>
         <hr />
         <div className="sideBySide">
           <p>My age</p>
-          <p onClick={() => navigate("/settings/update-age")}>user's age</p>
+          <p onClick={() => navigate("/settings/update-age")}>{user1.age}</p>
         </div>
         <hr />
         <div className="sideBySide">
           <p>My diet</p>
-          <p onClick={() => navigate("/settings/update-diet")}>user's diet</p>
+          <p onClick={() => navigate("/settings/update-diet")}>{user1.diet}</p>
         </div>
         <hr />
         <div className="sideBySide">
           <p>My education/work</p>
-          <p onClick={() => navigate("/settings/update-place")}>user's education</p>
+          <p onClick={() => navigate("/settings/update-place")}>
+            {user1.place}
+          </p>
         </div>
         <hr />
         <div className="sideBySide">
           <p>My description</p>
           <p onClick={() => navigate("/settings/update-description")}>
-            users's description
+            {user1.description}
           </p>
         </div>
         <hr />

@@ -31,11 +31,6 @@
     margin-left: 10px;
 }
 
-.userChat {
-    margin-left: -25px;
-    margin-right: 10px;
-}
-
 .friendMsg {
     float: left;
     background-color: white;
@@ -61,7 +56,7 @@
 }
 
 #keyboard {
-    position: fixed;
+    position: absolute;
     left: 20px;
     right: 20px;
     bottom: 30px;
@@ -71,9 +66,20 @@
     font-size: larger;
 }
 
+#msgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.chatList {
+    overflow-y: scroll;
+    height: 690px;
+}
+
 #message {
-    margin-top: -18px;
-    padding-left: 15px;
+    margin-top: -15px;
     font-size: 15px;
     font-weight: normal;
 }

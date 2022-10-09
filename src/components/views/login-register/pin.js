@@ -10,8 +10,12 @@ const Pin = () => {
       <p className="descriptionL">
         We have sent you a Code per E-Mail to verify your account
       </p>
-      <form action="" method="post">
-        <p>
+      <form
+        action=""
+        method="post"
+        onSubmit={() => navigate("/start-questions")}
+      >
+        <div id="pinInput">
           <input
             type="text"
             className="input"
@@ -40,14 +44,10 @@ const Pin = () => {
             maxLength="1"
             required
           ></input>
-        </p>
+        </div>
         <p id="space"></p>
         <p>
-          <button
-            type="button"
-            className="gradientButton"
-            onClick={() => navigate("/start-questions")}
-          >
+          <button type="submit" className="gradientButton">
             Go!
           </button>
         </p>

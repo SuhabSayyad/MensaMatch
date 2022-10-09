@@ -1,0 +1,85 @@
+#user {
+    width: 95vw;
+}
+
+.around {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 0px 0px -20px;
+}
+
+.spacing {
+    margin: 12px 20px 10px 0px;
+}
+
+#userImg {
+    margin-top: -15px;
+}
+
+.edit {
+    margin-top: -10px;
+    border: 3px solid #B3C92A;
+}
+
+#friendsList {
+    width: 95vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 9px;
+}
+
+#someonesProfile {
+    position: absolute;
+    bottom: 320px;
+    left: 20px;
+    right: 20px;
+}
+
+#upperInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+#keyboard2 {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -140px;
+    padding: 50px;
+    border: 2px solid grey;
+    border-radius: 25px;
+    font-size: larger;
+}
+
+#send {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    height: 50px;
+    bottom: -215px;
+}
+
+#user div#invitationList {
+    margin-top: -5px;
+    width: 95vw;
+    height: 12vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

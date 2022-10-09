@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import { IconContext } from "react-icons";
 
 //Icons
@@ -8,20 +10,24 @@ import { CgProfile } from "react-icons/cg";
 
 const Footer = () => {
   let navigate = useNavigate();
+/*
+    const [open, setOpen] = useState(true);
 
-  function showChats() {
-    navigate("/chats")
-    document.getElementById("chatListSlider").classList.toggle("active");
-  }
+    useEffect(() => {
+      setTimeout(function () {
+        setOpen(false);
+      }, 100);
+    }, []);
+*/
 
   return (
     <IconContext.Provider value={{ color: "black", size: "4em" }}>
       <footer id="footer">
         <div className="icons">
           <AiOutlineHome onClick={() => navigate("/main")} />
-          <AiOutlineSearch onClick={() => navigate("/browse")} />
+          <AiOutlineSearch onClick={() => navigate("/map")} />
           <AiOutlinePlus id="plus" />
-          <BiEnvelope onClick={showChats} />
+          <BiEnvelope onClick={() => navigate("/chats")} />
           <CgProfile onClick={() => navigate("/user")} />
         </div>
       </footer>

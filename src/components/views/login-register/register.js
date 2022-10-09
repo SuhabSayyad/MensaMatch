@@ -17,7 +17,11 @@ const Register = () => {
         <p>
           <BsGoogle size="2.5em" /> <BsApple />
         </p>
-        <form action="" method="post">
+        <form
+          action=""
+          method="post"
+          onSubmit={() => navigate("/register-pin")}
+        >
           <p>
             <input
               type="text"
@@ -40,7 +44,7 @@ const Register = () => {
           </p>
           <p>
             <input
-              type="text"
+              type="password"
               className="input"
               name="password"
               size="15"
@@ -50,11 +54,7 @@ const Register = () => {
           </p>
           <p id="space"></p>
           <p>
-            <button
-              type="submit"
-              className="gradientButton"
-              onClick={() => navigate("/register-pin")}
-            >
+            <button type="submit" className="gradientButton">
               Register
             </button>
           </p>

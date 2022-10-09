@@ -16,7 +16,7 @@ const Login = () => {
         <p>
           <BsGoogle size="2.5em" /> <BsApple />
         </p>
-        <form action="" method="post">
+        <form action="" method="post" onSubmit={() => navigate("/main")}>
           <p>
             <input
               type="text"
@@ -29,7 +29,7 @@ const Login = () => {
           </p>
           <p>
             <input
-              type="text"
+              type="password"
               className="input"
               name="password"
               size="15"
@@ -39,11 +39,7 @@ const Login = () => {
           </p>
           <p id="space"></p>
           <p>
-            <button
-              type="submit"
-              className="gradientButton"
-              onClick={() => navigate("/main")}
-            >
+            <button type="submit" className="gradientButton">
               Log in
             </button>
           </p>

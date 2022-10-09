@@ -1,5 +1,7 @@
+import { Invitation } from "./invitation";
+
 class User {
-  constructor(id, name, age, diet, place, description, hobbies, img, location, friends, chats) {
+  constructor(id, name, age, diet, place, description, hobbies, img, location, friends, chats, invitations) {
     this.id = id;
     this.name = name;
     this.age = age;
@@ -11,6 +13,7 @@ class User {
     this.location = location;
     this.friends = friends;
     this.chats = chats;
+    this.invitations = invitations;
   }
 
   addFriend(newFriend) {
@@ -31,11 +34,30 @@ var user1 = new User(
   "TU Dortmund",
   "Hello, I'm a student of TU!",
   "Swimming, Cooking",
-  "/img/maria.svg",
+  require("../img/maria.svg").default,
   "on",
-  [user1, user2, user4, user6],
-  ""
+  null,
+  "",
+  [
+    new Invitation(
+      0,
+      user1,
+      "monday",
+      "14:40",
+      "KostBar",
+      "Let us go to eat pasta together and discuss new researches :)"
+    ),
+    new Invitation(
+      1,
+      user1,
+      "tuesday",
+      "12:30",
+      "Hauptmensa",
+      "Let us go to eat pasta together and discuss new researches :)"
+    ),
+  ]
 );
+
 var user2 = new User(
   1,
   "Gregor Zamza",
@@ -44,10 +66,11 @@ var user2 = new User(
   "FH Dortmund",
   "Hello, I'm a student of FH!",
   "Football",
-  "./../../img/gregor.svg",
+  require("../img/gregor.svg").default,
   "off",
-  [user1, user2, user3],
-  ""
+  null,
+  "Yes, I will be waiting for you!",
+  null
 );
 var user3 = new User(
   2,
@@ -57,10 +80,11 @@ var user3 = new User(
   "TU Dortmund",
   "Hello, I'm a student of FH!",
   "Dancing",
-  "/img/elis.svg",
+  require("../img/elis.svg").default,
   "off",
-  [user4, user5, user6],
-  ""
+  null,
+  "Cool, see you then!", 
+  null
 );
 var user4 = new User(
   3,
@@ -70,10 +94,11 @@ var user4 = new User(
   "TU Dortmund",
   "Hello, I'm a student of TU!",
   "Swimming, Cooking",
-  "/img/maria.svg",
+  require("../img/veronika.svg").default,
   "on",
-  [user2, user4, user6],
-  ""
+  null,
+  "Sorry, something came up. I can't...", 
+  null
 );
 var user5 = new User(
   4,
@@ -83,24 +108,63 @@ var user5 = new User(
   "FH Dortmund",
   "Hello, I'm a student of FH!",
   "Football",
-  "/img/gregor.svg",
+  require("../img/max.svg").default,
   "off",
-  [user1, user2, user3, user4, user5],
-  ""
+  null,
+  "Hey, can you be there in 10?", 
+  null
 );
 var user6 = new User(
   5,
-  "Selina Smith",
+  "Selina Grande",
   21,
   "Omnivore",
   "TU Dortmund",
   "Hello, I'm a student of FH!",
   "Dancing",
-  "/img/elis.svg",
+  require("../img/selina.svg").default,
   "off",
-  [user1, user2, user3, user4, user5, user6],
-  ""
+  null,
+  "I had lots of fun today! Let's meet...",
+  null
 );
+
+var user7 = new User(
+  6,
+  "Harold Smith",
+  31,
+  "Pescetarian",
+  "TU Dortmund",
+  "Hello, I'm a student of FH!",
+  "Dancing",
+  require("../img/harold.svg").default,
+  "off",
+  null,
+  "Do you want to meet tomorrow a...",
+  null
+);
+
+var user8 = new User(
+  7,
+  "Nicki Manson",
+  31,
+  "Pescetarian",
+  "FH Dortmund",
+  "Hello, I'm a student of FH!",
+  "Dancing",
+  require("../img/nicki.svg").default,
+  "off",
+  null,
+  "Do you want to meet tomorrow a...",
+  null
+);
+
+user1.friends = [user2, user3, user4, user5, user6, user7, user8];
+user2.friends = [user1, user3, user4];
+user3.friends = [user1, user2, user5, user6];
+user4.friends = [user1, user2, user6];
+user5.friends = [user1, user3, user4];
+user6.friends = [user1, user2, user3, user4, user5];
 
 let users = [user1, user2, user3, user4, user5, user6];
 
@@ -110,9 +174,4 @@ function register() {
   users.push(new User());
 }
 
-module.exports = {
-  User: User,
-  user1: user1,
-  users: users,
-  register: register
-}
+export {user1, user2, users, register }

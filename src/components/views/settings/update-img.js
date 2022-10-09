@@ -4,17 +4,25 @@ import { useNavigate } from "react-router-dom";
 import SettingsHeader from "./settings-header";
 import SettingsButton from "./settings-button";
 
-const UpdateName = () => {
+const UpdateImg = () => {
   let navigate = useNavigate();
 
   return (
     <div id="settings">
       <SettingsHeader />
       <form action="" method="post" onSubmit={() => navigate("/settings")}>
-        <h1 id="settingsH1">My Nickname</h1>
-        <p id="label">Nickname</p>
+        <h1 id="settingsH1">My Avatar</h1>
+        <p id="display_image"></p>
         <p>
-          <input type="text" className="settingsInput" size="40" required></input>
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="choose_image"
+            width="50"
+            height="50"
+            required
+          ></input>
         </p>
         <SettingsButton />
       </form>
@@ -22,4 +30,4 @@ const UpdateName = () => {
   );
 };
 
-export default UpdateName;
+export default UpdateImg;
