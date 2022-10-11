@@ -57,6 +57,8 @@ import Matched from "./components/views/matched";
 const App = () => {
   return (
     <div className="App">
+      {/* the app still needs to be formatted (media-queries) for every device,
+       currently it is only workin right for the size of an IPhone 12 Pro */}
       <Routes>
         <Route path="/" element={<Welcome />}></Route>
         <Route path="/welcome2" element={<Welcome2 />}></Route>
