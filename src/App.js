@@ -12,6 +12,7 @@ import "./components/css/profiles.css";
 import "./components/css/sliders.css";
 import "./components/css/chat-frames.css";
 import "./components/css/invitations.css";
+import "./components/css/modal.css";
 
 //---------------Views-----------------//
 //welcome
@@ -41,15 +42,16 @@ import UpdatePlace from "./components/views/settings/update-place";
 import UpdateDescription from "./components/views/settings/update-description";
 //profiles
 import User from "./components/views/profiles/user";
-import Someone from "./components/views/profiles/someone";
+import Profile from "./components/views/profiles/profile";
 //chats
 import Chats from "./components/views/chat-frames/chats";
 import Chat from "./components/views/chat-frames/chat";
 
-import Main from "./components/views/main";
-import Browse from "./components/views/browse";
+import Home from "./components/views/home";
 import Map from "./components/views/map";
 import InvitationPage from "./components/models/invitation";
+import CreateInvitation from "./components/models/createInvitation";
+import InvitationCreated from "./components/views/invitation-created";
 import Matched from "./components/views/matched";
 
 const App = () => {
@@ -70,7 +72,7 @@ const App = () => {
         <Route path="/question5" element={<Question5 />}></Route>
         <Route path="/question6" element={<Question6 />}></Route>
         <Route path="/question7" element={<Question7 />}></Route>
-        <Route path="/someone" element={<Someone />}></Route>
+        <Route path="/profile/:id" element={<Profile />}></Route>
         <Route path="/user" element={<User />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
         <Route path="/settings/update-name" element={<UpdateName />}></Route>
@@ -84,11 +86,15 @@ const App = () => {
         ></Route>
         <Route path="/chats" element={<Chats />}></Route>
         <Route path="/chat" element={<Chat />}></Route>
-        <Route path="/main" element={<Main />}></Route>
-        <Route path="/browse" element={<Browse />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/map" element={<Map />}></Route>
-        <Route path="/invitation" element={<InvitationPage/>}></Route>
-        <Route path="/matched" element={<Matched/>}></Route>
+        <Route path="/invitation" element={<InvitationPage />}></Route>
+        <Route path="/create-invitation" element={<CreateInvitation />}></Route>
+        <Route
+          path="/invitation-created"
+          element={<InvitationCreated />}
+        ></Route>
+        <Route path="/matched" element={<Matched />}></Route>
       </Routes>
     </div>
   );

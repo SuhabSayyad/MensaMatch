@@ -28,6 +28,7 @@ const Welcome2 = () => {
         <p className="description">It is supposed to be a second message</p>
         <p>
           <button
+            id="fixedButton"
             className="gradientButton"
             onClick={() => navigate("/welcome3")}
           >

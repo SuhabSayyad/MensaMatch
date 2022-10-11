@@ -1,7 +1,8 @@
-import { Invitation } from "./invitation";
+import { invitations } from "./invitation";
+import { v4 as uuid } from "uuid";
 
 class User {
-  constructor(id, name, age, diet, place, description, hobbies, img, location, friends, chats, invitations) {
+  constructor(id, name, age, diet, place, description, hobbies, img, location, friends, chats, invites) {
     this.id = id;
     this.name = name;
     this.age = age;
@@ -13,7 +14,7 @@ class User {
     this.location = location;
     this.friends = friends;
     this.chats = chats;
-    this.invitations = invitations;
+    this.invites = invites;
   }
 
   addFriend(newFriend) {
@@ -27,7 +28,7 @@ class User {
 
 //manually created database
 var user1 = new User(
-  0,
+  uuid(),
   "Maria Arodzero",
   19,
   "Omnivore",
@@ -37,29 +38,12 @@ var user1 = new User(
   require("../img/maria.svg").default,
   "on",
   null,
-  "",
-  [
-    new Invitation(
-      0,
-      user1,
-      "monday",
-      "14:40",
-      "KostBar",
-      "Let us go to eat pasta together and discuss new researches :)"
-    ),
-    new Invitation(
-      1,
-      user1,
-      "tuesday",
-      "12:30",
-      "Hauptmensa",
-      "Let us go to eat pasta together and discuss new researches :)"
-    ),
-  ]
+  "", 
+  [invitations[0], invitations[1]]
 );
 
 var user2 = new User(
-  1,
+  uuid(),
   "Gregor Zamza",
   28,
   "Vegetarian",
@@ -70,10 +54,10 @@ var user2 = new User(
   "off",
   null,
   "Yes, I will be waiting for you!",
-  null
+  [invitations[2], invitations[3]]
 );
 var user3 = new User(
-  2,
+  uuid(),
   "Elis Ananas",
   22,
   "Pescetartian",
@@ -83,11 +67,11 @@ var user3 = new User(
   require("../img/elis.svg").default,
   "off",
   null,
-  "Cool, see you then!", 
-  null
+  "Cool, see you then!",
+  [invitations[4]]
 );
 var user4 = new User(
-  3,
+  uuid(),
   "Veronika Bo",
   30,
   "Vegan",
@@ -97,11 +81,11 @@ var user4 = new User(
   require("../img/veronika.svg").default,
   "on",
   null,
-  "Sorry, something came up. I can't...", 
-  null
+  "Sorry, something came up. I can't...",
+  [invitations[5]]
 );
 var user5 = new User(
-  4,
+  uuid(),
   "Max Mustermann",
   25,
   "Vegetarian",
@@ -111,11 +95,11 @@ var user5 = new User(
   require("../img/max.svg").default,
   "off",
   null,
-  "Hey, can you be there in 10?", 
-  null
+  "Hey, can you be there in 10?",
+  [invitations[6]]
 );
 var user6 = new User(
-  5,
+  uuid(),
   "Selina Grande",
   21,
   "Omnivore",
@@ -130,7 +114,7 @@ var user6 = new User(
 );
 
 var user7 = new User(
-  6,
+  uuid(),
   "Harold Smith",
   31,
   "Pescetarian",
@@ -145,7 +129,7 @@ var user7 = new User(
 );
 
 var user8 = new User(
-  7,
+  uuid(),
   "Nicki Manson",
   31,
   "Pescetarian",
@@ -159,14 +143,29 @@ var user8 = new User(
   null
 );
 
-user1.friends = [user2, user3, user4, user5, user6, user7, user8];
+var user9 = new User(
+  uuid(),
+  "Nicki Manson",
+  31,
+  "Pescetarian",
+  "FH Dortmund",
+  "Hello, I'm a student of FH!",
+  "Dancing",
+  require("../img/nicki.svg").default,
+  "off",
+  null,
+  "Do you want to meet tomorrow a...",
+  null
+);
+
+user1.friends = [user2, user3, user4, user5, user6, user7, user8, user9];
 user2.friends = [user1, user3, user4];
 user3.friends = [user1, user2, user5, user6];
 user4.friends = [user1, user2, user6];
 user5.friends = [user1, user3, user4];
 user6.friends = [user1, user2, user3, user4, user5];
 
-let users = [user1, user2, user3, user4, user5, user6];
+let users = [user1, user2, user3, user4, user5, user6, user7, user8, user9];
 
 
 /*to do*/

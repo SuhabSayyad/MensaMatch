@@ -11,12 +11,13 @@ const Login = () => {
     <IconContext.Provider value={{ color: "black", size: "3em" }}>
       <div>
         <div id="greenL"></div>
+        {/* function of login needs to be implemented */}
         <h1>Login</h1>
         <p className="descriptionL">Log in using these platforms:</p>
         <p>
           <BsGoogle size="2.5em" /> <BsApple />
         </p>
-        <form action="" method="post" onSubmit={() => navigate("/main")}>
+        <form action="" method="post" onSubmit={() => navigate("/home")}>
           <p>
             <input
               type="text"
@@ -37,9 +38,8 @@ const Login = () => {
               required
             ></input>
           </p>
-          <p id="space"></p>
           <p>
-            <button type="submit" className="gradientButton">
+            <button type="submit" id="space" className="gradientButton">
               Log in
             </button>
           </p>

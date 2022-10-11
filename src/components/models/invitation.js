@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
 
 //Views
 import Footer from "./../ui/footer";
@@ -20,16 +21,16 @@ class Invitation {
 }
 
 var invitation1 = new Invitation(
-  0,
+  uuid(),
   "{user4.name}",
   "today",
   "12:40",
-  "Foodfakultät",
+  "FoodFakultät",
   "Let us go to eat pasta together and discuss new researches :)"
 );
 
 var invitation2 = new Invitation(
-  1,
+  uuid(),
   "{user3.name}",
   "today",
   "13:00",
@@ -38,7 +39,7 @@ var invitation2 = new Invitation(
 );
 
 var invitation3 = new Invitation(
-  2,
+  uuid(),
   "{user2.name}",
   "tomorrow",
   "10:00",
@@ -47,7 +48,7 @@ var invitation3 = new Invitation(
 );
 
 var invitation4 = new Invitation(
-  3,
+  uuid(),
   "{user5.name}",
   "wednesday",
   "14:00",
@@ -56,7 +57,7 @@ var invitation4 = new Invitation(
 );
 
 var invitation5 = new Invitation(
-  4,
+  uuid(),
   "{user5.name}",
   "friday",
   "10:00",
@@ -65,7 +66,7 @@ var invitation5 = new Invitation(
 );
 
 var invitation6 = new Invitation(
-  5,
+  uuid(),
   "{user5.name}",
   "friday",
   "13:00",
@@ -83,6 +84,7 @@ var invitations = [
 ];
 
 export { invitations, Invitation};
+//invitation1, invitation2, invitation3, invitation4, invitation5, invitation6;
 
 //-----------------------------------------------------------------------------------------//
 
@@ -106,14 +108,14 @@ const InvitationPage = () => {
         </p>
 
         <div className="sideBySide">
-          <p>
+          <div>
             <img
               src={user2.img}
               id="userImg"
               width="110px"
               height="120px"
             ></img>
-          </p>
+          </div>
           <p id="nameI">{user2.name}</p>
         </div>
         <hr />
@@ -144,4 +146,5 @@ const InvitationPage = () => {
   );
 };
 
-export default InvitationPage;
+export default InvitationPage; 
+

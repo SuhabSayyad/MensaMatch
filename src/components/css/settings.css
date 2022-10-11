@@ -19,11 +19,17 @@
 }
 
 .settingsInput {
+    font-size: 30px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1.5px solid gray;
-    margin-bottom: 500px;
+}
+
+.settingsTextarea {
+    font-size: 30px;
+    border-radius: 25px;
+    border-bottom: 2px solid gray;
 }
 
 #avatarSpace {
@@ -34,8 +40,7 @@
     padding-bottom: 20px;
 }
 
-
-/* Location Button */
+/* Location Switch-Button */
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -90,7 +95,6 @@ input:checked+.slider:before {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }

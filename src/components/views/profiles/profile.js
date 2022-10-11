@@ -1,25 +1,25 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-
 //Views
-import Footer from "./../../ui/footer";
-import Header from "./../../ui/header";
+import Footer from "../../ui/footer";
+import Header from "../../ui/header";
 
 //Data
-import { user2 } from "../../models/persistence";
+import { user2, users } from "../../models/persistence";
 
-
-const Someone = () => {
+const Profile = () => {
   let navigate = useNavigate();
 
+  //Slider
   const [active, setActive] = useState(false);
-
   useEffect(() => {
     setTimeout(function () {
       setActive(true);
     }, 100);
   }, []);
+
+  const { id } = useParams();
 
   return (
     <div>
@@ -88,4 +88,4 @@ const Someone = () => {
   );
 };
 
-export default Someone;
+export default Profile;

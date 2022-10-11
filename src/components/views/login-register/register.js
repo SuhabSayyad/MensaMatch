@@ -12,6 +12,7 @@ const Register = () => {
     <IconContext.Provider value={{ color: "black", size: "3em" }}>
       <div>
         <div id="greenL"></div>
+        {/* function of register needs to be implemented */}
         <h1>Register</h1>
         <p className="descriptionL">Register using these platforms:</p>
         <p>
@@ -52,9 +53,8 @@ const Register = () => {
               required
             ></input>
           </p>
-          <p id="space"></p>
           <p>
-            <button type="submit" className="gradientButton">
+            <button type="submit" id="space" className="gradientButton">
               Register
             </button>
           </p>

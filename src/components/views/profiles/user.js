@@ -46,15 +46,16 @@ const User = () => {
         </div>
       </div>
       <p className="sideBySide">My invitations</p>
+      {/*edit/delete invitation needs to be implemented*/}
       <div id="invitationList">
-        {user1.invitations.map((invitation) => {
+        {user1.invites.map((invite) => {
           return (
-            <div id="invitation" onClick={() => navigate("/invitation")}>
+            <div key={invite.id} id="invitation" onClick={() => navigate("/invitation")}>
               <div id="time">
-                <p>{invitation.date},&nbsp;</p>
-                <p>{invitation.time}</p>
+                <p>{invite.date},&nbsp;</p>
+                <p>{invite.time}</p>
               </div>
-              <p id="place">{invitation.place}</p>
+              <p id="place">{invite.place}</p>
             </div>
           );
         })}

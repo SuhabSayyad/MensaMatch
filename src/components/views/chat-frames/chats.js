@@ -26,23 +26,23 @@ const Chats = () => {
         </p>
         <div className="chatList">
           <div id="friends">
+            {/* click on a chat does not show individual details of a chat */}
+      <div id="friendsList"></div>
             {user1.friends?.map((friend) => {
               return (
-                <>
-                  <div>
-                    <div
-                      id="friendsInfoSmall"
-                      onClick={() => navigate("/chat")}
-                    >
-                      <img src={friend.img} alt="Avatar"></img>
-                      <div id="msgContainer">
-                        <p>{friend.name}</p>
-                        <p id="message">{friend.chats}</p>
-                      </div>
+                <div key={friend.id}>
+                  <div
+                    id="friendsInfoSmall"
+                    onClick={() => navigate("/chat")}
+                   >
+                     <img src={friend.img} alt="Avatar"></img>
+                     <div id="msgContainer">
+                      <p>{friend.name}</p>
+                      <p id="message">{friend.chats}</p>
                     </div>
-                    <hr />
-                  </div>
-                </>
+                   </div>
+                  <hr />
+                 </div>
               );
             })}
           </div>

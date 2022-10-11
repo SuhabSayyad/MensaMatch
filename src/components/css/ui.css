@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  align-items: center;
+  align-items: space-between;
   justify-content: space-between;
   /* Warum funktioniert space-between nicht richtig?? */
   padding-top: 5px;
@@ -20,6 +20,10 @@
   border-top-right-radius: 30px;
   box-shadow: 2px 2px 10px 10px white;
   background-color: rgba(193, 217, 46, 0.57);
+}
+
+.margin {
+  margin-right: 10px;
 }
 
 #plus {

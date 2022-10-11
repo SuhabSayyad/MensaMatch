@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { IconContext } from "react-icons";
 
 //Icons
+import { IconContext } from "react-icons";
 import { BiArrowBack } from "react-icons/bi";
 
 const SettingsHeader = () => {

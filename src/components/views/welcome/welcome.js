@@ -33,6 +33,7 @@ const Welcome = () => {
 
         <p>
           <button
+            id="fixedButton"
             className="gradientButton"
             onClick={() => navigate("/welcome2")}
           >

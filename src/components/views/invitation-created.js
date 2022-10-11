@@ -6,9 +6,7 @@ import logo2 from "../img/logo2.svg";
 //Views
 import Footer from "../ui/footer";
 
-
-
-const Matched = () => {
+const InvitationCreated = () => {
   let navigate = useNavigate();
 
   const [active, setActive] = useState(false);
@@ -17,8 +15,7 @@ const Matched = () => {
     setTimeout(function () {
       setActive(true);
     }, 100);
-  }, 
-  []);
+  }, []);
 
   return (
     <div>
@@ -29,11 +26,9 @@ const Matched = () => {
         <div>
           <img src={logo2} alt="mm-logo2"></img>
         </div>
-        <p id="matchMessage">Yeah! You have matched!</p>
+        <p id="matchMessage">Yeah! We've posted your invitation!</p>
         <div id="matchedButton">
-          <button onClick={() => navigate("/chat")}>
-            Chat!
-          </button>
+          <button onClick={() => navigate("/user")}>Great!</button>
         </div>
       </div>
       <Footer />
@@ -41,4 +36,4 @@ const Matched = () => {
   );
 };
 
-export default Matched;
+export default InvitationCreated;

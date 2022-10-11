@@ -63,6 +63,7 @@ let navigate = useNavigate();
         </div>
         <hr />
         <div className="sideBySide" id="locationSpace">
+          {/* location button has no function */}
           <p>Show my location</p>
           <p>
             <label className="switch">

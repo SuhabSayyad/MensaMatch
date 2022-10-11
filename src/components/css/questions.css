@@ -5,18 +5,42 @@
     border-bottom-right-radius: 150px;
 }
 
+#back {
+    display: flex;
+}
+
+#center {
+    text-align: center;
+}
+
+#questions h1 {
+    margin-top: -25px;
+}
+
 #display_image {
-    height: 150px;
-    width: 150px;
-    margin-left: 110px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin-top: -15px;
     background-position: center;
     background-size: cover;
     border: 1px solid rgba(72, 78, 16, 1);
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 #choose_image {
     margin-left: 30px;
+}
+
+
+#diet {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgba(137, 217, 46, 1), rgba(193, 217, 46, 1));
 }
 
 .optional {

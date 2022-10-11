@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const SettingsButton = () => {
   let navigate = useNavigate();
   return (
-    <button type="submit" className="gradientButton">Save</button>
+    <button id="fixedButton" type="submit" className="gradientButton">Save</button>
   );
 };
 

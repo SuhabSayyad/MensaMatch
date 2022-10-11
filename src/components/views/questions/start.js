@@ -7,12 +7,19 @@ const Start = () => {
     <div>
       <div id="greenQ"></div>
       <h1>Tell us a bit more about you!</h1>
+      <p className="space"></p>
       <p className="description">
-        We and other members would like to know a bit more about you! Answer a few
-        questions to start.
+        We and other members would like to know a bit more about you! Answer a
+        few questions to start.
       </p>
       <p>
-        <button className="gradientButton" onClick={() => navigate("/question1")}>Okay!</button>
+        <button
+          id="fixedButton"
+          className="gradientButton"
+          onClick={() => navigate("/question1")}
+        >
+          Okay!
+        </button>
       </p>
     </div>
   );

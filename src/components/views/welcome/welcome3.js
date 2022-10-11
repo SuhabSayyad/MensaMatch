@@ -27,7 +27,11 @@ const Welcome3 = () => {
         <h1>Welcome to MensaMatch!</h1>
         <p className="description">Let's get it started!</p>
         <p>
-          <button className="gradientButton" onClick={() => navigate("/login")}>
+          <button
+            id="fixedButton"
+            className="gradientButton"
+            onClick={() => navigate("/login")}
+          >
             Start!
           </button>
         </p>

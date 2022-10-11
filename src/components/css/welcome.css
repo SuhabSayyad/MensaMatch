@@ -16,7 +16,7 @@
     margin-top: -20px;
 }
 
-#welcome p button {
+#fixedButton {
     position: fixed;
     left: 50%;
     bottom: 3%;

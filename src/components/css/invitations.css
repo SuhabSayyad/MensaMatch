@@ -71,3 +71,19 @@ h2 {
     font-weight: bold;
     margin: 35px 20px 0px 0px;
 }
+
+/*-----------Create Invitation---------------*/
+
+#choosePlace {
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    border-color: #C1D92E;
+}
+
+#chooseMessage {
+    font-size: large;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 15px;
+}

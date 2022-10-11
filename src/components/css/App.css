@@ -14,8 +14,8 @@ h1 {
   font-weight: normal;
 }
 
-.space {
-  margin: 40px;
+#space {
+  margin-top: 30px;
 }
 
 .input {
@@ -33,25 +33,15 @@ h1 {
 button {
   font-size: 30px;
   background-color: white;
-  margin-top: 15px;
   padding: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 150px;
   border-radius: 20px;
-  border: 5px;
-  border: solid grey;
+  border: 3px solid #B3C92A;
 }
 
 .gradientButton {
   background-image: linear-gradient(to right, rgba(137, 217, 46, 1), rgba(193, 217, 46, 1));
-  border: none;
-}
-
-select {
-  font-size: 30px;
-  padding-left: 10px;
-  border-radius: 20px;
-  background-image: linear-gradient(to right, rgba(137, 217, 46, 1), rgba(193, 217, 46, 1));
+  border: 3px solid grey;
 }
 
 option {
@@ -59,7 +49,7 @@ option {
   background-color: rgba(193, 217, 46, 0.57);
 }
 
-textarea {
+.questionArea {
   background-color:  rgba(193, 217, 46, 0.57);
   border: 1px solid rgba(72, 78, 16, 1);
   border-radius: 20px;

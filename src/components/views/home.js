@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 //Views
-import Footer from "./../ui/footer";
-import Header from "./../ui/header";
+import Footer from "../ui/footer";
+import Header from "../ui/header";
 import Friends from "./profiles/friends";
 
 //Data
 import { invitations } from "../models/invitation";
+import { users } from "../models/persistence";
 
-const Main = () => {
+const Home = () => {
   let navigate = useNavigate();
+  let { id } = useParams();
 
   return (
     <div id="main">
@@ -17,12 +19,19 @@ const Main = () => {
       <Friends />
       <div id="filter">
         <h2>Invitations</h2>
+        {/*Filter still needs to be implemented*/}
         <p>Filter by</p>
       </div>
       <div id="invitationList">
+        {/* click on an invitation does not show individual details of an invitation */}
+      <div id="friendsList"></div>
         {invitations.map((invitation) => {
           return (
-            <div id="invitation" onClick={() => navigate("/invitation")}>
+            <div
+              key={invitation.id}
+              id="invitation"
+              onClick={() => navigate("/invitation")}
+            >
               <div id="time">
                 <p>{invitation.date},&nbsp;</p>
                 <p>{invitation.time}</p>
@@ -37,4 +46,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
