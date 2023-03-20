@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 
-### THIS APP WAS BUILD ON THE SIZE OF AN IPHONE 12 PRO IN CHROME. SO PLEASE SET THE SETTINGS TO IPHONE 12 PRO WHILE GOING THROUGH THE APP!
+### This application was implemented for the size of an IPhone 12 Pro (in Chrome). Please set the settings to IPhone 12 Pro while going through the application! 
+
+### To read an article about this project, click on the following Link:
+https://techlabsdortmund.medium.com/mensamatch-building-new-connections-while-eating-in-campus-has-never-been-easier-9e1205ba67f9
+
 
 
 ## Available Scripts
